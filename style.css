@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --padding: 1em;
+  --textColor: #e76f51;
+  --textSecondary: white;
+  --bgColor: #264653;
+  --borderColor: rgba(111, 111, 111, 0.5);
+  --margin: 1em;
+  --boxShadow: rgba(111, 111, 111, 0.4);
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: auto;
+}
+
+.container .cover {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+}
+
+.container .cover nav {
+  text-align: center;
+  font-size: 28px;
+  color: var(--textColor);
+}
+
+.container .cover nav h3 {
+  font-family: cursive;
+}
+
+.container .cover #inputt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 264px;
+  height: 80px;
+  background-color: var(--boxShadow);
+  -webkit-box-shadow: 10px 0px 0px #264653, -10px 0px 0px #264653;
+          box-shadow: 10px 0px 0px #264653, -10px 0px 0px #264653;
+  border-top: 10px solid #264653;
+  border-bottom: 10px solid #264653;
+  margin: 0 auto;
+  margin-top: var(--margin);
+  color: var(--textColor);
+}
+
+.container .cover #inputt #curr {
+  font-size: 21px;
+  color: var(--bgColor);
+}
+
+.container .cover #inputt #prev {
+  margin-top: 5px;
+}
+
+.container .cover #grid {
+  width: 264px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row-align: center;
+      align-self: center;
+  padding: var(--padding);
+  grid-gap: 10px;
+  border: 1px solid rgba(111, 111, 111, 0.5);
+  border-top: none;
+  border-bottom: 10px solid var(--boxShadow);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+  -webkit-box-shadow: -10px 0px 0px 0px var(--boxShadow), 10px 0px 0px 0px var(--boxShadow);
+          box-shadow: -10px 0px 0px 0px var(--boxShadow), 10px 0px 0px 0px var(--boxShadow);
+      grid-template-areas: "allClear allClear clear decimall" "one two three minus" "four five six multiple" "seven eight nine addition" "zeroo division equal equal";
+}
+
+.container .cover #grid .grid-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 30px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 3px var(--boxShadow);
+          box-shadow: 0px 0px 3px var(--boxShadow);
+  color: var(--textColor);
+}
+
+.container .cover #grid .grid-cont:hover {
+  background-color: var(--bgColor);
+  color: var(--textSecondary);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  border-radius: 0.2em;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+          transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.container .cover #grid #one {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: one;
+  border-radius: 50%;
+}
+
+.container .cover #grid #two {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: two;
+  border-radius: 50%;
+}
+
+.container .cover #grid #three {
+  border-radius: 50%;
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: three;
+}
+
+.container .cover #grid #four {
+  border-radius: 50%;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: four;
+}
+
+.container .cover #grid #five {
+  border-radius: 50%;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: five;
+}
+
+.container .cover #grid #six {
+  border-radius: 50%;
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: six;
+}
+
+.container .cover #grid #seven {
+  border-radius: 50%;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: seven;
+}
+
+.container .cover #grid #eight {
+  border-radius: 50%;
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: eight;
+}
+
+.container .cover #grid #nine {
+  border-radius: 50%;
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: nine;
+}
+
+.container .cover #grid #zeroo {
+  border-radius: 50%;
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: zeroo;
+}
+
+.container .cover #grid #minus {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: minus;
+}
+
+.container .cover #grid #multiple {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: multiple;
+}
+
+.container .cover #grid #addition {
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
+  grid-area: addition;
+}
+
+.container .cover #grid #decimall {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: decimall;
+}
+
+.container .cover #grid #allClear {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: allClear;
+  background: #cd0000;
+  color: white;
+}
+
+.container .cover #grid #clear {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: clear;
+}
+
+.container .cover #grid #equal {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: equal;
+}
+
+@media screen and (max-width: 320px) {
+  #inputt {
+    margin-left: 5px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
